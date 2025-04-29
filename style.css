@@ -1,68 +1,72 @@
 @font-face 
 {
-    font-family:'Poppins';
-    font-weight:400 500;
-    font-style: normal;
-    src: url(../age-calculator-app-main/assets/fonts/Poppins-Regular.ttf)
-
+    font-family:"Poppins";
+    font-style:normal; font-weight:normal;
+    
+    src: url(/assets/fonts/Poppins-Regular.ttf)
 }
 @font-face 
 {
-    font-family:'Poppins';
-    font-weight:600 900;
-    font-style: bold;
+    font-family:"Poppins";
+    font-weight: bold; font-style: oblique;
     src: url(../age-calculator-app-main/assets/fonts/Poppins-Bold.ttf);
 }
 
 @font-face 
 {
-    font-family:'Poppins';
-    font-weight:400 900;
-    font-style: italic;
+    font-family:"Poppins";
+    font-weight:normal; font-style: oblique;
     src: url(../age-calculator-app-main/assets/fonts/Poppins-Italic.ttf);
 }
 
 @font-face 
 {
-    font-family:'Poppins';
-    font-weight:700 900;
-    font-style:oblique;
+    font-family:"Poppins";
+    font-weight:bold;  font-style: italic;
     src: url(../age-calculator-app-main/assets/fonts/Poppins-BoldItalic.ttf);
 }
-*{font-family: 'Poppins';}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+    font-weight: bolder; font-style: normal;
+}
 /*_______________________________________________________________________________________________________________________________________________*/
 /*___________________________________________________Screen Sizes [ranges go from (FULL -> small)]____________________________________________________
     Chromebook screen: width = [1495px - 400px] ; height = 825px
     Desktop Screen: width = [3200px - 500px] ; height = 1265px
     Mobile: width = 320px ; height = 1 in   (both sizes can be flipped)
+    WYSIWYG: width = [3000px - 1673px - 500px] ; height = 1265px
 __________________________________________________________________________________________________________________________________________________*/
-/*
-.ruler-x{border: red solid;width: 1495px; height:0; position: absolute;}
-.ruler-y{border: blue solid; width:0; height: 825px;position: absolute;}
+/**
+
+.ruler-x{border: red solid;width: 1673px; height:0;    position: absolute; top: 0;left: 0;}
+.ruler-y{border: blue solid; width:0; height: 1265px;   position: absolute; top:0;left: 0;}
 */
 .attribution { font-size: 11px; text-align: center;}
 .attribution a { color: hsl(228, 45%, 44%);  }
 
 body{background: hsl(0, 0%, 94%);margin-top: 100px;}
 /*_______________________________________________________________________________________________________________________*/
-.content{align-content: center; height:95vh;}
+.content{align-content: center;height:90vh;}
 
 .mainwrapper
 {
-    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr;
+    display: grid; 
+    grid-template-columns: 3fr 1fr 1fr; grid-template-rows: 1fr 3fr 1fr;
     border: thin; border-radius: 10px; border-bottom-right-radius:35% ;
-    max-width: 850px; max-height:640px;  
+    max-width: 1000px; max-height:640px;  
     justify-self: center;
-    background: white;
+    background: white; font-family: Poppins;
 }
 /*_______________________________________________________________________________________________________________________________
 _______________________________________________________________________________________________________________________*/
 
 form{
-    display:flex; flex-wrap:wrap; 
-    justify-content: space-around; align-content: center;
+    display: flex; height: 10rem; width:150% ;
+    justify-content: space-around; align-items: center; outline: dotted blue;
     text-transform: uppercase; text-indent:15px; letter-spacing: 2px; 
-    
+    /*                                                              */
+    grid-row: 1; grid-column: 1;
 }
 input
 {
@@ -70,12 +74,15 @@ input
     border-radius: 5%;
     font-size: xx-large;}
 
-
+.outcontainer
+{
+    /*                         */
+    grid-row: 2; grid-column: 1;
+}
 .agedisplay
 {   
-    margin:0 1rem;
-    font-size: 100%;
-    
+    margin:0 9rem;
+    font-size: 180%;
     span
     {
         color: blueviolet;
@@ -83,9 +90,11 @@ input
 }
 
 .butt-wrapper{
-    display: flex;outline: dotted;
+    display: flex;
     justify-self:right;justify-content: left; 
-    width:fit-content; height: fit-content;}
+    width:fit-content; height: fit-content; 
+    grid-row: 2; grid-column: 3;
+}
 button
 {
     background-image: url("../age-calculator-app-main/assets/images/icon-arrow.svg");
