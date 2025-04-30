@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
@@ -17,9 +17,7 @@
     <div class="ruler-y"></div>
   </nav>
   <div class="content">
-
-    <div class="mainwrapper">
-      
+    <div class="mainwrapper">  
       <form action="#none" target="_self" id="input-wrapper">
         
         <div class="wrapper">
@@ -33,6 +31,7 @@
           <input type="text" name="Month" id="month" placeholder="MM">
           <small></small>
         </div>
+
         <div class="wrapper">
           <label for="year">Year</label><br>
           <input type="text" name="Year" id="year" placeholder="YYYY">
@@ -40,18 +39,18 @@
         </div>
 
       </form>
-      
+
       <div class="butt-wrapper">
         <button type="button"></button>
       </div>
-
+    
       <div class="outcontainer">
         <div class="agedisplay years"> <h1><span>- -</span>years</h1> </div> 
         <div class="agedisplay months"> <h1><span>- -</span>months</h1> </div> 
         <div class="agedisplay days"> <h1><span>- -</span>days</h1> </div> 
       </div>
-  </div>
-    
+    </div>
+  </div>    
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
