@@ -1,0 +1,121 @@
+@font-face 
+{
+    font-family:"Poppins";
+    font-style:normal; font-weight:normal;
+    
+    src: url(/assets/fonts/Poppins-Regular.ttf)
+}
+@font-face 
+{
+    font-family:"Poppins";
+    font-weight: bold; font-style: oblique;
+    src: url(../age-calculator-app-main/assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face 
+{
+    font-family:"Poppins";
+    font-weight:normal; font-style: oblique;
+    src: url(../age-calculator-app-main/assets/fonts/Poppins-Italic.ttf);
+}
+
+@font-face 
+{
+    font-family:"Poppins";
+    font-weight:bold;  font-style: italic;
+    src: url(../age-calculator-app-main/assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+    font-weight: bolder; font-style: normal;
+}
+/*_______________________________________________________________________________________________________________________________________________*/
+/*___________________________________________________Screen Sizes [ranges go from (FULL -> small)]____________________________________________________
+    Chromebook screen: width = [1495px - 400px] ; height = 825px
+    Desktop Screen: width = [3200px - 500px] ; height = 1265px
+    Mobile: width = 320px ; height = 1 in   (both sizes can be flipped)
+    WYSIWYG: width = [3000px - 1673px - 500px] ; height = 1265px
+__________________________________________________________________________________________________________________________________________________*/
+/**
+
+.ruler-x{border: red solid;width: 1673px; height:0;    position: absolute; top: 0;left: 0;}
+.ruler-y{border: blue solid; width:0; height: 1265px;   position: absolute; top:0;left: 0;}
+*/
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%);  }
+
+
+
+:root
+{
+    /*COLORS*/
+    --clr-grey:hsl(0, 1%, 44%);
+    --clr-light-grey: hsl(0, 0%, 86%);
+    --clr-lighter-grey: hsl(0, 0%, 94%);
+    --clr-red: hsl(0, 100%, 67%);
+    --clr-purple:hsl(259, 100%, 65%);
+    /*Sample Category*/
+
+}
+
+body{background: hsl(0, 0%, 94%);margin-top: 100px;}
+/*_______________________________________________________________________________________________________________________*/
+.content{align-content: center;height:90vh;}
+
+.mainwrapper
+{
+    display:run-in;
+    border: thin; border-radius: 10%; border-bottom-right-radius:25% ;
+    min-width: 320px; max-width: 1200px; 
+    max-height:900px;  
+    justify-self: center;
+    
+    background: white; font-family: Poppins;
+}
+/*_______________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________*/
+
+form
+{
+    display: flex; border-bottom: solid 1px var(--clr-light-grey);
+    width:85%; height: 15rem;
+    align-items: center; 
+    text-transform: uppercase; text-indent:65px; letter-spacing: 2px; color: var(--clr-grey); 
+}
+input
+{
+    width: 120px; height: 65px; margin-inline-start: 4rem;
+    border-radius: 5%; 
+    font-size: xx-large; font-weight: bold;
+}
+/*------------------------------------------------------------------------------\-----------------------      */
+/*------------------------------------------------------------------------------\----------------------------*/
+.outcontainer 
+{
+    display:flex; flex-wrap:wrap; 
+}
+.agedisplay /*represents each agedisplay header (each word after <span>)*/
+{   
+    margin:-2rem 10%;
+    font-size: 300%;
+    span{
+        color:var(--clr-purple);
+    };
+   
+}
+/*------------------------------------------------------------------------------\---------------------------------------\ ---------------------------------------\---------------------------------------        */
+/*------------------------------------------------------------------------------\---------------------------------------\ ---------------------------------------\---------------------------------------        */
+.butt-wrapper{
+    display: flex; justify-content: right;
+    width: 950px;
+}
+button
+{
+    background: url("/assets/images/icon-arrow.svg") var(--clr-purple) border-box 50% no-repeat;
+    transition: 0.15s ease-in-out; 
+    width: 6rem; height: 6rem; 
+    border-radius: 50%; border: thin;
+    margin:-2.5rem 3rem; 
+}
+button:active{transform: scale(1.05);}
