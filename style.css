@@ -1,0 +1,76 @@
+@font-face 
+{
+    font-family:'Poppins';
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+    font-style: normal;
+}
+@font-face 
+{
+    font-family:'Poppins';
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+    font-style: bold;
+}
+@font-face 
+{
+    font-family:'Poppins';
+    src: url(/assets/fonts/Poppins-Italic.ttf);
+    font-style: italic; 
+}
+/*_______________________________________________________________________________________________________________________________________________*/
+/*___________________________________________________Screen Sizes [ranges go from (FULL -> small)]____________________________________________________
+    Chromebook screen: width = [1495px - 400px] ; height = 825px
+    Desktop Screen: width = [3200px - 500px] ; height = 1265px
+    Mobile: width = 320px ; height = 1 in   (both sizes can be flipped)
+    WYSIWYG: width = [3000px - 1673px - 500px] ; height = 1265px
+__________________________________________________________________________________________________________________________________________________*/
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%);  }
+/*--------------------------------------------------------------------------------------------------------------------*/
+body
+{
+    background: hsl(0, 0%, 94%); height: 90vh;
+    display: flex; justify-content: center; align-items: center;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.mainwrapper
+{
+    display:ruby-base; border:thin; border-radius: 10px; border-bottom-right-radius:35% ;
+    min-width:320px; max-width:max-content ;font:'Poppins' oblique;
+    height: max-content;
+    background: white; 
+}
+/*_____________________________________________________________________________________________________________________________________________*/
+/*_____________________________________________________________________________________________________________________________________________*/
+form
+{
+    display: flex; flex-direction: row;
+    width:640px ; height: 128px; justify-content: space-around;
+
+    input
+    {
+        width: 75px; height:50px; font-size: 20px;
+    }
+}
+
+button
+{
+    border: thin; border-radius: 50%;
+    background: border-box 50% url(assets/images/icon-arrow.svg) hsl(228, 45%, 44%);
+    width:4rem; height: 4rem;
+}
+
+.outcontainer{
+    
+    .agedisplay
+    {
+        font-size:35px;
+        margin-inline-start: 100px;
+        margin-block:2rem -2rem;
+    }
+    span
+    {
+        color: hsl(228, 45%, 44%);
+        letter-spacing: 10px;
+    }
+}
