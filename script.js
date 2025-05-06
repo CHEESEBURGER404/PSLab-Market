@@ -1,3 +1,4 @@
+
 const button = document.querySelector("button");
 
 const input = Array.from(document.getElementsByTagName("input")) //get info from these elements
@@ -14,29 +15,33 @@ const output = Array.from(document.getElementsByTagName('span')) //return info t
 //output[1] = input[1]
 //output[0] = input[2]
 
-function CalculateAge(date,month,year)
+function CalculateAge()
 { 
+    //Client Age = Current(year/month/day) - Birthdate(year/month/day)
     let d = new Date()
-    //if days = 43, the program should  [month++, days=11]
-    for (date-=d.getDate(); date > 31; month++) {
-        date-=31;
+    
+    let year = input[2].valueAsNumber
+    let month = input[1].valueAsNumber
+    let day = input[0].valueAsNumber
+
+
+    let yearsold = d.getFullYear() - year
+    let monthsold = d.getMonth() - month
+    let daysold = d.getDate() - day
+    
+    //If I enter March 24 2008, into May 6th 2025's calculator, I should get
+    // 17 years / 2 months / |6-24| days (-1 month)
+    if(daysold < 1){
+        daysold+=input[0].valueAsNumber
     }
-    for (date-=d.getDate; date < 1; month--) {
-        date+=31
-    }
-    //if months = 24, the program should get [year++, months=11]
-    for (month-=d.getMonth(); month > 12; year++) {
-        month-=12;
-    }
-    for (month-=d.getMonth(); month < 1; year--) {
-        date+=12
-    }
+
+    document.getElementsByClassName('years')[0].textContent = yearsold
+    document.getElementsByClassName('months')[0].textContent = monthsold
+    document.getElementsByClassName('days')[0].textContent = daysold
+
 }
 
 
 button.addEventListener("click",() => {
-    output.at(2).textContent = input.at(0).valueAsNumber
-    output.at(1).textContent = input.at(1).valueAsNumber
-    output.at(0).textContent = input.at(2).valueAsNumber
-    CalculateAge(output.at(0).valueAsNumber,output.at(1).valueAsNumber,output.at(2).valueAsNumber)
+    CalculateAge()
 })
